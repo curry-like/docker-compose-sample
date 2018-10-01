@@ -10,3 +10,8 @@ services:
       MYSQL_DATABASE: "sample_db"
     volumes:
     - "./mysql/conf.d/:/etc/mysql/conf.d"
+  sample-redis:
+        container_name: sample_redis
+        image: "redis:3.2.12"
+        ports:
+            - "7379:6379"
